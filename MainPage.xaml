@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WlasciwosciCzcionki.MainPage"
+             Padding="20">
+    <VerticalStackLayout HorizontalOptions="FillAndExpand">
+        <Label Text="Właściwośći czczionki"
+               FontSize="Large"
+               BackgroundColor="#558B2F"
+               FontAttributes="Bold"/>
+        <Label Text="{Binding Path=SliderValue, StringFormat='Rozmiar: {0:F0}'}" />
+        
+        <Slider x:Name="slider" Maximum="40" ValueChanged="OnSliderValueChanged"/>
+        <Label x:Name="label" Text="Dzień dobry" />
+        
+        <Button Text=">>" 
+                Clicked="OnButtonClicked"
+                BackgroundColor="#558B2F"
+                TextColor="White"
+                VerticalOptions="Center"
+                HorizontalOptions="CenterAndExpand"
+                FontAttributes="Bold"/>
+
+                
+    </VerticalStackLayout>
+</ContentPage>
